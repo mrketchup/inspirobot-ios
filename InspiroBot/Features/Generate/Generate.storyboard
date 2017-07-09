@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2D5-VU-cWv">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--InspiroBot-->
+        <scene sceneID="r9C-sJ-hFB">
+            <objects>
+                <viewController id="PrJ-RN-OXa" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NGT-5J-qW8"/>
+                        <viewControllerLayoutGuide type="bottom" id="XHa-tq-5ux"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oKI-0G-FZr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="InspiroBot" id="1DF-ry-2gn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xud-hl-Jfn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="920.79999999999995" y="119.1904047976012"/>
+        </scene>
+        <!--Generate-->
+        <scene sceneID="0q6-Aa-nt1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2D5-VU-cWv" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Generate" image="generate" id="Om3-bA-I9q"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zJB-q0-FWU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PrJ-RN-OXa" kind="relationship" relationship="rootViewController" id="Ntb-1e-2xh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="233-oI-fTX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-18.399999999999999" y="119.1904047976012"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="generate" width="25" height="25"/>
+    </resources>
+</document>
