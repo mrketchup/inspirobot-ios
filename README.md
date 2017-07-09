@@ -1,2 +1,2 @@
 # inspirobot-ios
-The InspiroBot iOS App
+http://inspirobot.me/
