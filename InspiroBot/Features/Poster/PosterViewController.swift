@@ -27,12 +27,16 @@ class PosterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        toggleFavoriteButton.title = InspiroBotService.shared.isFavorite(poster) ? "Unfavorite" : "Favorite"
         imageLoader.loadImage { image in
             self.imageView.image = image
             self.shareButton.isEnabled = true
             self.toggleFavoriteButton.isEnabled = true
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        toggleFavoriteButton.title = InspiroBotService.shared.isFavorite(poster) ? "Unfavorite" : "Favorite"
     }
     
     @IBAction private func share() {
