@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2D5-VU-cWv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2D5-VU-cWv">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--InspiroBot-->
         <scene sceneID="r9C-sJ-hFB">
             <objects>
-                <viewController id="PrJ-RN-OXa" sceneMemberID="viewController">
+                <viewController id="PrJ-RN-OXa" customClass="GenerateViewController" customModule="InspiroBot" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NGT-5J-qW8"/>
                         <viewControllerLayoutGuide type="bottom" id="XHa-tq-5ux"/>
@@ -20,9 +22,56 @@
                     <view key="view" contentMode="scaleToFill" id="oKI-0G-FZr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="760" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3J-Xt-W4h">
+                                <rect key="frame" x="125" y="564" width="125" height="46"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="28"/>
+                                <color key="tintColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="contentEdgeInsets" minX="8" minY="6" maxX="8" maxY="6"/>
+                                <state key="normal" title="Generate"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="generate" destination="PrJ-RN-OXa" eventType="touchUpInside" id="IZf-93-Jqt"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zlK-xP-TpF">
+                                <rect key="frame" x="16" y="162" width="343" height="343"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zlK-xP-TpF" secondAttribute="height" multiplier="1:1" id="qfb-GN-mxb"/>
+                                </constraints>
+                            </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="iBd-HY-dat">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="D3J-Xt-W4h" secondAttribute="bottom" constant="8" id="2PP-GM-On5"/>
+                            <constraint firstItem="iBd-HY-dat" firstAttribute="centerY" secondItem="zlK-xP-TpF" secondAttribute="centerY" id="5Mp-UX-Okc"/>
+                            <constraint firstItem="iBd-HY-dat" firstAttribute="centerX" secondItem="zlK-xP-TpF" secondAttribute="centerX" id="P39-av-cYs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zlK-xP-TpF" secondAttribute="trailing" id="U3J-IR-aPY"/>
+                            <constraint firstItem="zlK-xP-TpF" firstAttribute="leading" secondItem="oKI-0G-FZr" secondAttribute="leadingMargin" id="c4a-Vw-dDp"/>
+                            <constraint firstItem="zlK-xP-TpF" firstAttribute="centerY" secondItem="oKI-0G-FZr" secondAttribute="centerY" priority="750" id="eSQ-qW-TWE"/>
+                            <constraint firstItem="D3J-Xt-W4h" firstAttribute="centerX" secondItem="oKI-0G-FZr" secondAttribute="centerX" id="omX-8a-NYr"/>
+                            <constraint firstItem="D3J-Xt-W4h" firstAttribute="top" relation="greaterThanOrEqual" secondItem="zlK-xP-TpF" secondAttribute="bottom" constant="8" id="xSa-tJ-12h"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="InspiroBot" id="1DF-ry-2gn"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="iBd-HY-dat" id="KhC-Sx-kfH"/>
+                        <outlet property="imageView" destination="zlK-xP-TpF" id="Ecd-oh-wRv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xud-hl-Jfn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -36,7 +85,7 @@
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zJB-q0-FWU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
