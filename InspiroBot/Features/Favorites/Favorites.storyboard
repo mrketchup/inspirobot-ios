@@ -9,25 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Favorites-->
-        <scene sceneID="1dV-cP-d14">
-            <objects>
-                <viewController id="Wmw-je-HT5" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jSG-Fe-eRT"/>
-                        <viewControllerLayoutGuide type="bottom" id="dt0-2K-gjb"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="KN2-OB-Igx">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Favorites" id="lmK-72-Cuf"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LVh-q2-d3m" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1295.2" y="67.916041979010501"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="rYh-0a-Pos">
             <objects>
@@ -41,12 +22,61 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Wmw-je-HT5" kind="relationship" relationship="rootViewController" id="MUb-pD-a6F"/>
+                        <segue destination="5H0-lm-GiW" kind="relationship" relationship="rootViewController" id="S5v-4G-c7d"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6bv-jO-1mL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="356" y="67.916041979010501"/>
+        </scene>
+        <!--Favorites-->
+        <scene sceneID="29p-BH-JCp">
+            <objects>
+                <collectionViewController id="5H0-lm-GiW" customClass="FavoritesViewController" customModule="InspiroBot" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Nmt-oS-rVB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="xIP-k7-dZz">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FavoriteCell" id="hdZ-5K-0XF" customClass="FavoriteCell" customModule="InspiroBot" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7xt-Tg-xud">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="7xt-Tg-xud" secondAttribute="bottom" id="4Vx-pY-PTR"/>
+                                    <constraint firstItem="7xt-Tg-xud" firstAttribute="leading" secondItem="hdZ-5K-0XF" secondAttribute="leading" id="D5x-Eg-uh2"/>
+                                    <constraint firstAttribute="trailing" secondItem="7xt-Tg-xud" secondAttribute="trailing" id="ky9-3F-YyR"/>
+                                    <constraint firstItem="7xt-Tg-xud" firstAttribute="top" secondItem="hdZ-5K-0XF" secondAttribute="top" id="pgu-XF-vDK"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="7xt-Tg-xud" id="uFb-hr-gGQ"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="5H0-lm-GiW" id="p0K-8F-tDP"/>
+                            <outlet property="delegate" destination="5H0-lm-GiW" id="C7d-VB-RqK"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Favorites" id="D68-1K-nxi"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WGT-dU-uOD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1169" y="68"/>
         </scene>
     </scenes>
 </document>

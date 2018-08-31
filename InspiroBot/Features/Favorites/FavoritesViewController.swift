@@ -1,5 +1,5 @@
 //
-//  HistoryViewController.swift
+//  FavoritesViewController.swift
 //  InspiroBot
 //
 //  Created by Matt Jones on 8/31/18.
@@ -8,29 +8,27 @@
 
 import UIKit
 
-class HistoryViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
-    
+class FavoritesViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         collectionView?.reloadData()
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return InspiroBotService.shared.history.count
+        return InspiroBotService.shared.favorites.count
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HistoryCell.reuseIdentifier, for: indexPath) as! HistoryCell
-        let poster = InspiroBotService.shared.history[indexPath.item]
-        cell.configure(with: poster, isFavorite: InspiroBotService.shared.isFavorite(poster))
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FavoriteCell.reuseIdentifier, for: indexPath) as! FavoriteCell
+        cell.configure(with: InspiroBotService.shared.favorites[indexPath.item])
         return cell
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let poster = InspiroBotService.shared.history[indexPath.item]
-        let isFavorite = InspiroBotService.shared.toggleFavorite(poster)
-        let cell = collectionView.cellForItem(at: indexPath) as! HistoryCell
-        cell.configure(with: poster, isFavorite: isFavorite)
+        let poster = InspiroBotService.shared.favorites[indexPath.item]
+        InspiroBotService.shared.toggleFavorite(poster)
+        collectionView.deleteItems(at: [indexPath])
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -40,17 +38,15 @@ class HistoryViewController: UICollectionViewController, UICollectionViewDelegat
 
 }
 
-class HistoryCell: UICollectionViewCell {
+class FavoriteCell: UICollectionViewCell {
     
-    static let reuseIdentifier = "HistoryCell"
+    static let reuseIdentifier = "FavoriteCell"
     
     @IBOutlet var imageView: UIImageView!
-    @IBOutlet var favoriteIcon: UIImageView!
     
     private var loader: ImageLoader?
     
-    func configure(with poster: Poster, isFavorite: Bool) {
-        favoriteIcon.isHidden = !isFavorite
+    func configure(with poster: Poster) {
         loader = ImageLoader(url: poster.url)
         loader?.loadImage { [weak self] image in
             self?.imageView.image = image
@@ -60,7 +56,6 @@ class HistoryCell: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         loader?.cancel()
-        favoriteIcon.isHidden = true
         imageView.image = nil
     }
     

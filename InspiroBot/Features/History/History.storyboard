@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -38,31 +39,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="jLt-xC-t5Q">
-                            <size key="itemSize" width="50" height="50"/>
+                            <size key="itemSize" width="151" height="136"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HistoryCell" id="h8C-AM-RbJ" customClass="HistoryCell" customModule="InspiroBot" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <rect key="frame" x="0.0" y="0.0" width="151" height="136"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="151" height="136"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ncO-gU-3u3">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="151" height="136"/>
+                                        </imageView>
+                                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="favorite" translatesAutoresizingMaskIntoConstraints="NO" id="rEQ-4f-ulh">
+                                            <rect key="frame" x="8" y="8" width="20" height="20"/>
                                         </imageView>
                                     </subviews>
                                 </view>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="ncO-gU-3u3" secondAttribute="bottom" id="DrJ-pl-wh6"/>
+                                    <constraint firstItem="rEQ-4f-ulh" firstAttribute="top" secondItem="h8C-AM-RbJ" secondAttribute="topMargin" id="OE6-pj-9Zs"/>
                                     <constraint firstAttribute="trailing" secondItem="ncO-gU-3u3" secondAttribute="trailing" id="hDF-Qh-KQY"/>
+                                    <constraint firstItem="rEQ-4f-ulh" firstAttribute="leading" secondItem="h8C-AM-RbJ" secondAttribute="leadingMargin" id="qS5-nm-nyC"/>
                                     <constraint firstItem="ncO-gU-3u3" firstAttribute="leading" secondItem="h8C-AM-RbJ" secondAttribute="leading" id="rbo-T3-BZP"/>
                                     <constraint firstItem="ncO-gU-3u3" firstAttribute="top" secondItem="h8C-AM-RbJ" secondAttribute="top" id="s9F-TW-qMg"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="favoriteIcon" destination="rEQ-4f-ulh" id="RDS-nY-O4A"/>
                                     <outlet property="imageView" destination="ncO-gU-3u3" id="mgR-dm-yaf"/>
                                 </connections>
                             </collectionViewCell>
@@ -76,7 +83,10 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qpr-Ko-eOq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1127" y="94"/>
+            <point key="canvasLocation" x="1125.5999999999999" y="93.103448275862078"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="favorite" width="20" height="20"/>
+    </resources>
 </document>
