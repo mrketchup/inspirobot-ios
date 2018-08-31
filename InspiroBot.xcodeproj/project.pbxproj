@@ -7,34 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3415A69B1F12817E00190EE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3415A69A1F12817E00190EE6 /* Main.storyboard */; };
-		3415A6A31F12831400190EE6 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3415A6A21F12831400190EE6 /* History.storyboard */; };
-		3415A6A51F1283AD00190EE6 /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3415A6A41F1283AD00190EE6 /* Favorites.storyboard */; };
-		3415A6A71F1285F000190EE6 /* Generate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3415A6A61F1285F000190EE6 /* Generate.storyboard */; };
-		3415A6A91F128B1D00190EE6 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3415A6A81F128B1D00190EE6 /* Settings.bundle */; };
 		3439037A213846DF005FCB75 /* InspiroBotAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34390379213846DF005FCB75 /* InspiroBotAPI.swift */; };
-		3439037C21384A73005FCB75 /* GenerateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3439037B21384A73005FCB75 /* GenerateViewController.swift */; };
 		3439037E21384CB8005FCB75 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3439037D21384CB8005FCB75 /* ImageLoader.swift */; };
 		3439038021386598005FCB75 /* InspiroBotService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3439037F21386598005FCB75 /* InspiroBotService.swift */; };
-		349D126F21399A5C00E8D7B8 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D126E21399A5C00E8D7B8 /* HistoryViewController.swift */; };
-		349D12712139A67200E8D7B8 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D12702139A67200E8D7B8 /* FavoritesViewController.swift */; };
+		349D12912139B3FC00E8D7B8 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D12872139B3FC00E8D7B8 /* FavoritesViewController.swift */; };
+		349D12922139B3FC00E8D7B8 /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 349D12882139B3FC00E8D7B8 /* Favorites.storyboard */; };
+		349D12932139B3FC00E8D7B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 349D12892139B3FC00E8D7B8 /* Main.storyboard */; };
+		349D12942139B3FC00E8D7B8 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 349D128B2139B3FC00E8D7B8 /* History.storyboard */; };
+		349D12952139B3FC00E8D7B8 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D128C2139B3FC00E8D7B8 /* HistoryViewController.swift */; };
+		349D12962139B3FC00E8D7B8 /* GenerateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D128E2139B3FC00E8D7B8 /* GenerateViewController.swift */; };
+		349D12972139B3FC00E8D7B8 /* Generate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 349D128F2139B3FC00E8D7B8 /* Generate.storyboard */; };
+		349D12992139B46A00E8D7B8 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 349D12982139B46A00E8D7B8 /* Settings.bundle */; };
 		34DBDD0B1F127FAF001FCEEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DBDD0A1F127FAF001FCEEE /* AppDelegate.swift */; };
 		34DBDD121F127FAF001FCEEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34DBDD111F127FAF001FCEEE /* Assets.xcassets */; };
 		34DBDD151F127FAF001FCEEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34DBDD131F127FAF001FCEEE /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3415A69A1F12817E00190EE6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Features/Main.storyboard; sourceTree = "<group>"; };
-		3415A6A21F12831400190EE6 /* History.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = History.storyboard; path = Features/History/History.storyboard; sourceTree = "<group>"; };
-		3415A6A41F1283AD00190EE6 /* Favorites.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Favorites.storyboard; path = Features/Favorites/Favorites.storyboard; sourceTree = "<group>"; };
-		3415A6A61F1285F000190EE6 /* Generate.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Generate.storyboard; path = Features/Generate/Generate.storyboard; sourceTree = "<group>"; };
-		3415A6A81F128B1D00190EE6 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = Features/Settings.bundle; sourceTree = "<group>"; };
 		34390379213846DF005FCB75 /* InspiroBotAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspiroBotAPI.swift; sourceTree = "<group>"; };
-		3439037B21384A73005FCB75 /* GenerateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GenerateViewController.swift; path = Features/Generate/GenerateViewController.swift; sourceTree = "<group>"; };
 		3439037D21384CB8005FCB75 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		3439037F21386598005FCB75 /* InspiroBotService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspiroBotService.swift; sourceTree = "<group>"; };
-		349D126E21399A5C00E8D7B8 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HistoryViewController.swift; path = Features/History/HistoryViewController.swift; sourceTree = "<group>"; };
-		349D12702139A67200E8D7B8 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavoritesViewController.swift; path = Features/Favorites/FavoritesViewController.swift; sourceTree = "<group>"; };
+		349D12872139B3FC00E8D7B8 /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		349D12882139B3FC00E8D7B8 /* Favorites.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
+		349D12892139B3FC00E8D7B8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		349D128B2139B3FC00E8D7B8 /* History.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
+		349D128C2139B3FC00E8D7B8 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		349D128E2139B3FC00E8D7B8 /* GenerateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerateViewController.swift; sourceTree = "<group>"; };
+		349D128F2139B3FC00E8D7B8 /* Generate.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Generate.storyboard; sourceTree = "<group>"; };
+		349D12982139B46A00E8D7B8 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		34DBDD071F127FAF001FCEEE /* InspiroBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InspiroBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34DBDD0A1F127FAF001FCEEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34DBDD111F127FAF001FCEEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,53 +53,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3415A6981F12812B00190EE6 /* Features */ = {
-			isa = PBXGroup;
-			children = (
-				3415A69A1F12817E00190EE6 /* Main.storyboard */,
-				3415A69C1F1281CD00190EE6 /* Generate */,
-				3415A69D1F1281D700190EE6 /* History */,
-				3415A69E1F1281E400190EE6 /* Favorites */,
-			);
-			name = Features;
-			sourceTree = "<group>";
-		};
 		3415A6991F12813D00190EE6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3415A6A81F128B1D00190EE6 /* Settings.bundle */,
+				349D12982139B46A00E8D7B8 /* Settings.bundle */,
 				34DBDD111F127FAF001FCEEE /* Assets.xcassets */,
 				34DBDD131F127FAF001FCEEE /* LaunchScreen.storyboard */,
 				34DBDD161F127FAF001FCEEE /* Info.plist */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
-		};
-		3415A69C1F1281CD00190EE6 /* Generate */ = {
-			isa = PBXGroup;
-			children = (
-				3415A6A61F1285F000190EE6 /* Generate.storyboard */,
-				3439037B21384A73005FCB75 /* GenerateViewController.swift */,
-			);
-			name = Generate;
-			sourceTree = "<group>";
-		};
-		3415A69D1F1281D700190EE6 /* History */ = {
-			isa = PBXGroup;
-			children = (
-				3415A6A21F12831400190EE6 /* History.storyboard */,
-				349D126E21399A5C00E8D7B8 /* HistoryViewController.swift */,
-			);
-			name = History;
-			sourceTree = "<group>";
-		};
-		3415A69E1F1281E400190EE6 /* Favorites */ = {
-			isa = PBXGroup;
-			children = (
-				3415A6A41F1283AD00190EE6 /* Favorites.storyboard */,
-				349D12702139A67200E8D7B8 /* FavoritesViewController.swift */,
-			);
-			name = Favorites;
 			sourceTree = "<group>";
 		};
 		34390378213846B0005FCB75 /* API */ = {
@@ -110,6 +72,44 @@
 				3439037F21386598005FCB75 /* InspiroBotService.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		349D12842139B3FC00E8D7B8 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				349D12892139B3FC00E8D7B8 /* Main.storyboard */,
+				349D128D2139B3FC00E8D7B8 /* Generate */,
+				349D128A2139B3FC00E8D7B8 /* History */,
+				349D12862139B3FC00E8D7B8 /* Favorites */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		349D12862139B3FC00E8D7B8 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				349D12872139B3FC00E8D7B8 /* FavoritesViewController.swift */,
+				349D12882139B3FC00E8D7B8 /* Favorites.storyboard */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		349D128A2139B3FC00E8D7B8 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				349D128B2139B3FC00E8D7B8 /* History.storyboard */,
+				349D128C2139B3FC00E8D7B8 /* HistoryViewController.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		349D128D2139B3FC00E8D7B8 /* Generate */ = {
+			isa = PBXGroup;
+			children = (
+				349D128E2139B3FC00E8D7B8 /* GenerateViewController.swift */,
+				349D128F2139B3FC00E8D7B8 /* Generate.storyboard */,
+			);
+			path = Generate;
 			sourceTree = "<group>";
 		};
 		34DBDCFE1F127FAF001FCEEE = {
@@ -133,7 +133,7 @@
 			children = (
 				34DBDD0A1F127FAF001FCEEE /* AppDelegate.swift */,
 				34390378213846B0005FCB75 /* API */,
-				3415A6981F12812B00190EE6 /* Features */,
+				349D12842139B3FC00E8D7B8 /* Features */,
 				3415A6991F12813D00190EE6 /* Resources */,
 			);
 			path = InspiroBot;
@@ -200,13 +200,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3415A69B1F12817E00190EE6 /* Main.storyboard in Resources */,
-				3415A6A71F1285F000190EE6 /* Generate.storyboard in Resources */,
-				3415A6A51F1283AD00190EE6 /* Favorites.storyboard in Resources */,
+				349D12992139B46A00E8D7B8 /* Settings.bundle in Resources */,
 				34DBDD151F127FAF001FCEEE /* LaunchScreen.storyboard in Resources */,
-				3415A6A31F12831400190EE6 /* History.storyboard in Resources */,
+				349D12942139B3FC00E8D7B8 /* History.storyboard in Resources */,
 				34DBDD121F127FAF001FCEEE /* Assets.xcassets in Resources */,
-				3415A6A91F128B1D00190EE6 /* Settings.bundle in Resources */,
+				349D12932139B3FC00E8D7B8 /* Main.storyboard in Resources */,
+				349D12972139B3FC00E8D7B8 /* Generate.storyboard in Resources */,
+				349D12922139B3FC00E8D7B8 /* Favorites.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,12 +218,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				34DBDD0B1F127FAF001FCEEE /* AppDelegate.swift in Sources */,
-				3439037C21384A73005FCB75 /* GenerateViewController.swift in Sources */,
-				349D12712139A67200E8D7B8 /* FavoritesViewController.swift in Sources */,
 				3439038021386598005FCB75 /* InspiroBotService.swift in Sources */,
-				349D126F21399A5C00E8D7B8 /* HistoryViewController.swift in Sources */,
 				3439037E21384CB8005FCB75 /* ImageLoader.swift in Sources */,
+				349D12952139B3FC00E8D7B8 /* HistoryViewController.swift in Sources */,
+				349D12912139B3FC00E8D7B8 /* FavoritesViewController.swift in Sources */,
 				3439037A213846DF005FCB75 /* InspiroBotAPI.swift in Sources */,
+				349D12962139B3FC00E8D7B8 /* GenerateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
