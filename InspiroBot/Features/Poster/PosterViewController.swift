@@ -36,7 +36,9 @@ class PosterViewController: UIViewController {
     }
     
     @IBAction private func share() {
-        
+        guard let image = imageView.image else { return }
+        let controller = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        present(controller, animated: true)
     }
     
     @IBAction private func toggleFavorite() {
