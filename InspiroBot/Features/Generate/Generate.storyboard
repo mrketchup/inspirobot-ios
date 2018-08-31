@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="760" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3J-Xt-W4h">
-                                <rect key="frame" x="125" y="564" width="125" height="46"/>
+                                <rect key="frame" x="125" y="560" width="125" height="46"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="28"/>
                                 <color key="tintColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -57,7 +57,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="bottomMargin" secondItem="D3J-Xt-W4h" secondAttribute="bottom" constant="8" id="2PP-GM-On5"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="D3J-Xt-W4h" secondAttribute="bottom" constant="12" id="2PP-GM-On5"/>
                             <constraint firstItem="iBd-HY-dat" firstAttribute="centerY" secondItem="zlK-xP-TpF" secondAttribute="centerY" id="5Mp-UX-Okc"/>
                             <constraint firstItem="iBd-HY-dat" firstAttribute="centerX" secondItem="zlK-xP-TpF" secondAttribute="centerX" id="P39-av-cYs"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zlK-xP-TpF" secondAttribute="trailing" id="U3J-IR-aPY"/>
@@ -67,10 +67,23 @@
                             <constraint firstItem="D3J-Xt-W4h" firstAttribute="top" relation="greaterThanOrEqual" secondItem="zlK-xP-TpF" secondAttribute="bottom" constant="8" id="xSa-tJ-12h"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="InspiroBot" id="1DF-ry-2gn"/>
+                    <navigationItem key="navigationItem" title="InspiroBot" id="1DF-ry-2gn">
+                        <barButtonItem key="leftBarButtonItem" enabled="NO" systemItem="action" id="IGU-Vx-hOa">
+                            <connections>
+                                <action selector="share" destination="PrJ-RN-OXa" id="gIU-Og-1fg"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Favorite" id="sEK-0F-udJ">
+                            <connections>
+                                <action selector="toggleFavorite:" destination="PrJ-RN-OXa" id="XzX-va-ExR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="activityIndicator" destination="iBd-HY-dat" id="KhC-Sx-kfH"/>
                         <outlet property="imageView" destination="zlK-xP-TpF" id="Ecd-oh-wRv"/>
+                        <outlet property="shareButton" destination="IGU-Vx-hOa" id="ttO-cp-QQ9"/>
+                        <outlet property="toggleFavoriteButton" destination="sEK-0F-udJ" id="7o7-oj-7p4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xud-hl-Jfn" userLabel="First Responder" sceneMemberID="firstResponder"/>
