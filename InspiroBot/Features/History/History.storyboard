@@ -1,33 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Bbq-FF-jZt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Bbq-FF-jZt">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--History-->
-        <scene sceneID="pJ6-ug-6XV">
-            <objects>
-                <viewController id="MxV-j7-84J" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="AYK-6o-Jb6"/>
-                        <viewControllerLayoutGuide type="bottom" id="vze-a9-fva"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="xnu-TI-aba">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="History" id="3xo-eH-k6y"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9ls-Wk-KA8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1176.8" y="91.304347826086968"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="S1m-SB-Y0c">
             <objects>
@@ -35,18 +16,67 @@
                     <tabBarItem key="tabBarItem" systemItem="history" id="dxV-6O-dKV"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QVY-iI-chE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" largeTitles="YES" id="QVY-iI-chE">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="MxV-j7-84J" kind="relationship" relationship="rootViewController" id="Scj-gv-Fn2"/>
+                        <segue destination="l9y-ig-Amd" kind="relationship" relationship="rootViewController" id="BAr-e5-6Q6"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cuy-kV-By7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="237.59999999999999" y="91.304347826086968"/>
+        </scene>
+        <!--History-->
+        <scene sceneID="euP-mG-W9r">
+            <objects>
+                <collectionViewController id="l9y-ig-Amd" customClass="HistoryViewController" customModule="InspiroBot" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="XJR-Ov-cBD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="jLt-xC-t5Q">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HistoryCell" id="h8C-AM-RbJ" customClass="HistoryCell" customModule="InspiroBot" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ncO-gU-3u3">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ncO-gU-3u3" secondAttribute="bottom" id="DrJ-pl-wh6"/>
+                                    <constraint firstAttribute="trailing" secondItem="ncO-gU-3u3" secondAttribute="trailing" id="hDF-Qh-KQY"/>
+                                    <constraint firstItem="ncO-gU-3u3" firstAttribute="leading" secondItem="h8C-AM-RbJ" secondAttribute="leading" id="rbo-T3-BZP"/>
+                                    <constraint firstItem="ncO-gU-3u3" firstAttribute="top" secondItem="h8C-AM-RbJ" secondAttribute="top" id="s9F-TW-qMg"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="ncO-gU-3u3" id="mgR-dm-yaf"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="l9y-ig-Amd" id="wQY-DB-80H"/>
+                            <outlet property="delegate" destination="l9y-ig-Amd" id="8k2-y6-ah7"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="History" id="m2B-f0-roQ"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qpr-Ko-eOq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1127" y="94"/>
         </scene>
     </scenes>
 </document>

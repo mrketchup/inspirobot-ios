@@ -11,27 +11,6 @@ import UIKit
 
 struct Poster: Codable {
     let url: URL
-    let imageLoader: ImageLoader
-    
-    enum CodingKeys: String, CodingKey {
-        case url
-    }
-    
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        let url = try values.decode(URL.self, forKey: .url)
-        self.init(url: url)
-    }
-    
-    init(url: URL) {
-        self.url = url
-        imageLoader = ImageLoader(url: url)
-    }
-    
-    init (image: UIImage) {
-        self.url = URL(fileURLWithPath: "unknown.jpg")
-        imageLoader = ImageLoader(image: image)
-    }
 }
 
 class InspiroBotService {
@@ -40,13 +19,26 @@ class InspiroBotService {
     
     private let api = InspiroBotAPI()
     
+    private(set) var history: [Poster] {
+        get {
+            guard let data = UserDefaults.standard.data(forKey: "inspirobot.history") else { return [] }
+            return (try? JSONDecoder().decode([Poster].self, from: data)) ?? []
+        }
+        set {
+            guard let data = try? JSONEncoder().encode(newValue) else { return }
+            UserDefaults.standard.setValue(data, forKey: "inspirobot.history")
+        }
+    }
+    
     func generatePoster(then completion: @escaping (Poster) -> Void) {
         api.generatePoster { result in
             switch result {
             case .success(let url):
                 let poster = Poster(url: url)
+                self.history.insert(poster, at: 0)
                 completion(poster)
-            case .failure: completion(Poster(image: UIImage()))
+            case .failure:
+                completion(Poster(url: URL(fileURLWithPath: "error.jpg")))
             }
         }
     }

@@ -17,6 +17,7 @@ class ImageLoader {
     }
     
     private var status: Status
+    private var task: URLSessionTask?
     
     init(url: URL) { status = .unloaded(url) }
     init(image: UIImage) { status = .loaded(image) }
@@ -35,15 +36,23 @@ class ImageLoader {
         }
     }
     
+    func cancel() {
+        task?.cancel()
+        task = nil
+    }
+    
     private func loadImage(from url: URL, then completion: @escaping (UIImage) -> Void) {
         if let image = ImageCache.shared.image(for: url) {
             completion(image)
             return
         }
         
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+        task?.cancel()
+        task = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
             let image: UIImage
             defer { completion(image) }
+            
+            self?.task = nil
             
             if let data = data, let _image = UIImage(data: data) {
                 ImageCache.shared.setImage(_image, for: url)
@@ -52,7 +61,7 @@ class ImageLoader {
                 image = UIImage()
             }
         }
-        task.resume()
+        task?.resume()
     }
     
 }

@@ -17,7 +17,7 @@ class GenerateViewController: UIViewController {
         self.imageView.image = nil
         activityIndicator.startAnimating()
         InspiroBotService.shared.generatePoster { poster in
-            poster.imageLoader.loadImage { image in
+            ImageLoader(url: poster.url).loadImage { image in
                 self.activityIndicator.stopAnimating()
                 self.imageView.image = image
             }

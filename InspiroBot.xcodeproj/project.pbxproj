@@ -16,6 +16,7 @@
 		3439037C21384A73005FCB75 /* GenerateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3439037B21384A73005FCB75 /* GenerateViewController.swift */; };
 		3439037E21384CB8005FCB75 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3439037D21384CB8005FCB75 /* ImageLoader.swift */; };
 		3439038021386598005FCB75 /* InspiroBotService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3439037F21386598005FCB75 /* InspiroBotService.swift */; };
+		349D126F21399A5C00E8D7B8 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D126E21399A5C00E8D7B8 /* HistoryViewController.swift */; };
 		34DBDD0B1F127FAF001FCEEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DBDD0A1F127FAF001FCEEE /* AppDelegate.swift */; };
 		34DBDD121F127FAF001FCEEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34DBDD111F127FAF001FCEEE /* Assets.xcassets */; };
 		34DBDD151F127FAF001FCEEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34DBDD131F127FAF001FCEEE /* LaunchScreen.storyboard */; };
@@ -31,6 +32,7 @@
 		3439037B21384A73005FCB75 /* GenerateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GenerateViewController.swift; path = Features/Generate/GenerateViewController.swift; sourceTree = "<group>"; };
 		3439037D21384CB8005FCB75 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		3439037F21386598005FCB75 /* InspiroBotService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspiroBotService.swift; sourceTree = "<group>"; };
+		349D126E21399A5C00E8D7B8 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HistoryViewController.swift; path = Features/History/HistoryViewController.swift; sourceTree = "<group>"; };
 		34DBDD071F127FAF001FCEEE /* InspiroBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InspiroBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34DBDD0A1F127FAF001FCEEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34DBDD111F127FAF001FCEEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				3415A6A21F12831400190EE6 /* History.storyboard */,
+				349D126E21399A5C00E8D7B8 /* HistoryViewController.swift */,
 			);
 			name = History;
 			sourceTree = "<group>";
@@ -125,8 +128,8 @@
 		34DBDD091F127FAF001FCEEE /* InspiroBot */ = {
 			isa = PBXGroup;
 			children = (
-				34390378213846B0005FCB75 /* API */,
 				34DBDD0A1F127FAF001FCEEE /* AppDelegate.swift */,
+				34390378213846B0005FCB75 /* API */,
 				3415A6981F12812B00190EE6 /* Features */,
 				3415A6991F12813D00190EE6 /* Resources */,
 			);
@@ -214,6 +217,7 @@
 				34DBDD0B1F127FAF001FCEEE /* AppDelegate.swift in Sources */,
 				3439037C21384A73005FCB75 /* GenerateViewController.swift in Sources */,
 				3439038021386598005FCB75 /* InspiroBotService.swift in Sources */,
+				349D126F21399A5C00E8D7B8 /* HistoryViewController.swift in Sources */,
 				3439037E21384CB8005FCB75 /* ImageLoader.swift in Sources */,
 				3439037A213846DF005FCB75 /* InspiroBotAPI.swift in Sources */,
 			);
