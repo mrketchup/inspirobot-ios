@@ -18,6 +18,8 @@
 		349D12962139B3FC00E8D7B8 /* GenerateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D128E2139B3FC00E8D7B8 /* GenerateViewController.swift */; };
 		349D12972139B3FC00E8D7B8 /* Generate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 349D128F2139B3FC00E8D7B8 /* Generate.storyboard */; };
 		349D12992139B46A00E8D7B8 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 349D12982139B46A00E8D7B8 /* Settings.bundle */; };
+		349D129C2139B51B00E8D7B8 /* PosterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D129B2139B51B00E8D7B8 /* PosterViewController.swift */; };
+		349D129E2139B53400E8D7B8 /* PosterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 349D129D2139B53400E8D7B8 /* PosterViewController.storyboard */; };
 		34DBDD0B1F127FAF001FCEEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DBDD0A1F127FAF001FCEEE /* AppDelegate.swift */; };
 		34DBDD121F127FAF001FCEEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34DBDD111F127FAF001FCEEE /* Assets.xcassets */; };
 		34DBDD151F127FAF001FCEEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34DBDD131F127FAF001FCEEE /* LaunchScreen.storyboard */; };
@@ -35,6 +37,8 @@
 		349D128E2139B3FC00E8D7B8 /* GenerateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerateViewController.swift; sourceTree = "<group>"; };
 		349D128F2139B3FC00E8D7B8 /* Generate.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Generate.storyboard; sourceTree = "<group>"; };
 		349D12982139B46A00E8D7B8 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		349D129B2139B51B00E8D7B8 /* PosterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterViewController.swift; sourceTree = "<group>"; };
+		349D129D2139B53400E8D7B8 /* PosterViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PosterViewController.storyboard; sourceTree = "<group>"; };
 		34DBDD071F127FAF001FCEEE /* InspiroBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InspiroBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34DBDD0A1F127FAF001FCEEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34DBDD111F127FAF001FCEEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -81,6 +85,7 @@
 				349D128D2139B3FC00E8D7B8 /* Generate */,
 				349D128A2139B3FC00E8D7B8 /* History */,
 				349D12862139B3FC00E8D7B8 /* Favorites */,
+				349D129A2139B4E400E8D7B8 /* Poster */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -88,8 +93,8 @@
 		349D12862139B3FC00E8D7B8 /* Favorites */ = {
 			isa = PBXGroup;
 			children = (
-				349D12872139B3FC00E8D7B8 /* FavoritesViewController.swift */,
 				349D12882139B3FC00E8D7B8 /* Favorites.storyboard */,
+				349D12872139B3FC00E8D7B8 /* FavoritesViewController.swift */,
 			);
 			path = Favorites;
 			sourceTree = "<group>";
@@ -106,10 +111,19 @@
 		349D128D2139B3FC00E8D7B8 /* Generate */ = {
 			isa = PBXGroup;
 			children = (
-				349D128E2139B3FC00E8D7B8 /* GenerateViewController.swift */,
 				349D128F2139B3FC00E8D7B8 /* Generate.storyboard */,
+				349D128E2139B3FC00E8D7B8 /* GenerateViewController.swift */,
 			);
 			path = Generate;
+			sourceTree = "<group>";
+		};
+		349D129A2139B4E400E8D7B8 /* Poster */ = {
+			isa = PBXGroup;
+			children = (
+				349D129D2139B53400E8D7B8 /* PosterViewController.storyboard */,
+				349D129B2139B51B00E8D7B8 /* PosterViewController.swift */,
+			);
+			path = Poster;
 			sourceTree = "<group>";
 		};
 		34DBDCFE1F127FAF001FCEEE = {
@@ -202,6 +216,7 @@
 			files = (
 				349D12992139B46A00E8D7B8 /* Settings.bundle in Resources */,
 				34DBDD151F127FAF001FCEEE /* LaunchScreen.storyboard in Resources */,
+				349D129E2139B53400E8D7B8 /* PosterViewController.storyboard in Resources */,
 				349D12942139B3FC00E8D7B8 /* History.storyboard in Resources */,
 				34DBDD121F127FAF001FCEEE /* Assets.xcassets in Resources */,
 				349D12932139B3FC00E8D7B8 /* Main.storyboard in Resources */,
@@ -218,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34DBDD0B1F127FAF001FCEEE /* AppDelegate.swift in Sources */,
+				349D129C2139B51B00E8D7B8 /* PosterViewController.swift in Sources */,
 				3439038021386598005FCB75 /* InspiroBotService.swift in Sources */,
 				3439037E21384CB8005FCB75 /* ImageLoader.swift in Sources */,
 				349D12952139B3FC00E8D7B8 /* HistoryViewController.swift in Sources */,

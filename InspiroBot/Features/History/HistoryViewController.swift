@@ -28,9 +28,8 @@ class HistoryViewController: UICollectionViewController, UICollectionViewDelegat
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let poster = InspiroBotService.shared.history[indexPath.item]
-        let isFavorite = InspiroBotService.shared.toggleFavorite(poster)
-        let cell = collectionView.cellForItem(at: indexPath) as! HistoryCell
-        cell.configure(with: poster, isFavorite: isFavorite)
+        let controller = PosterViewController.make(with: poster)
+        navigationController?.pushViewController(controller, animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

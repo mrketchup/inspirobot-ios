@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ILJ-Q5-eoM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Poster View Controller-->
+        <scene sceneID="JOX-VV-Apq">
+            <objects>
+                <viewController id="ILJ-Q5-eoM" customClass="PosterViewController" customModule="InspiroBot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lvn-mr-Xm3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k1i-hv-Spr">
+                                <rect key="frame" x="16" y="169.5" width="343" height="343"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="k1i-hv-Spr" secondAttribute="height" multiplier="1:1" id="Ews-az-S1L"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="k1i-hv-Spr" firstAttribute="centerY" secondItem="gLW-JX-vzI" secondAttribute="centerY" id="BAm-AV-v3L"/>
+                            <constraint firstItem="k1i-hv-Spr" firstAttribute="leading" secondItem="Lvn-mr-Xm3" secondAttribute="leadingMargin" id="FSd-DE-MNd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="k1i-hv-Spr" secondAttribute="trailing" id="esc-IT-cUA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gLW-JX-vzI"/>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="Cdp-RD-0Vb">
+                        <rightBarButtonItems>
+                            <barButtonItem enabled="NO" systemItem="action" id="hqd-H5-P3Z">
+                                <connections>
+                                    <action selector="share" destination="ILJ-Q5-eoM" id="6NW-Wy-xRq"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem enabled="NO" title="Favorite" id="sgT-EG-weJ">
+                                <connections>
+                                    <action selector="toggleFavorite" destination="ILJ-Q5-eoM" id="ujD-aE-YWZ"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
+                    <connections>
+                        <outlet property="imageView" destination="k1i-hv-Spr" id="Cno-5Z-PTO"/>
+                        <outlet property="shareButton" destination="hqd-H5-P3Z" id="3Ae-EH-QBt"/>
+                        <outlet property="toggleFavoriteButton" destination="sgT-EG-weJ" id="oM5-c6-q05"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jwU-zO-pxO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="65" y="83"/>
+        </scene>
+    </scenes>
+</document>

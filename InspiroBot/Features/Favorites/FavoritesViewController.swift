@@ -27,8 +27,8 @@ class FavoritesViewController: UICollectionViewController, UICollectionViewDeleg
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let poster = InspiroBotService.shared.favorites[indexPath.item]
-        InspiroBotService.shared.toggleFavorite(poster)
-        collectionView.deleteItems(at: [indexPath])
+        let controller = PosterViewController.make(with: poster)
+        navigationController?.pushViewController(controller, animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

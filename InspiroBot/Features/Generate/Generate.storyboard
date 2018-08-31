@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2D5-VU-cWv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2D5-VU-cWv">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -8,6 +8,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,10 +16,6 @@
         <scene sceneID="r9C-sJ-hFB">
             <objects>
                 <viewController id="PrJ-RN-OXa" customClass="GenerateViewController" customModule="InspiroBot" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="NGT-5J-qW8"/>
-                        <viewControllerLayoutGuide type="bottom" id="XHa-tq-5ux"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="oKI-0G-FZr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,23 +56,24 @@
                         <constraints>
                             <constraint firstAttribute="bottomMargin" secondItem="D3J-Xt-W4h" secondAttribute="bottom" constant="12" id="2PP-GM-On5"/>
                             <constraint firstItem="iBd-HY-dat" firstAttribute="centerY" secondItem="zlK-xP-TpF" secondAttribute="centerY" id="5Mp-UX-Okc"/>
+                            <constraint firstItem="zlK-xP-TpF" firstAttribute="centerY" secondItem="yC2-0Z-I4Z" secondAttribute="centerY" priority="750" constant="-7.5" id="Ct1-7J-5ge"/>
                             <constraint firstItem="iBd-HY-dat" firstAttribute="centerX" secondItem="zlK-xP-TpF" secondAttribute="centerX" id="P39-av-cYs"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zlK-xP-TpF" secondAttribute="trailing" id="U3J-IR-aPY"/>
                             <constraint firstItem="zlK-xP-TpF" firstAttribute="leading" secondItem="oKI-0G-FZr" secondAttribute="leadingMargin" id="c4a-Vw-dDp"/>
-                            <constraint firstItem="zlK-xP-TpF" firstAttribute="centerY" secondItem="oKI-0G-FZr" secondAttribute="centerY" priority="750" id="eSQ-qW-TWE"/>
-                            <constraint firstItem="D3J-Xt-W4h" firstAttribute="centerX" secondItem="oKI-0G-FZr" secondAttribute="centerX" id="omX-8a-NYr"/>
+                            <constraint firstItem="D3J-Xt-W4h" firstAttribute="centerX" secondItem="yC2-0Z-I4Z" secondAttribute="centerX" id="omX-8a-NYr"/>
                             <constraint firstItem="D3J-Xt-W4h" firstAttribute="top" relation="greaterThanOrEqual" secondItem="zlK-xP-TpF" secondAttribute="bottom" constant="8" id="xSa-tJ-12h"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="yC2-0Z-I4Z"/>
                     </view>
                     <navigationItem key="navigationItem" title="InspiroBot" id="1DF-ry-2gn">
-                        <barButtonItem key="leftBarButtonItem" enabled="NO" systemItem="action" id="IGU-Vx-hOa">
+                        <barButtonItem key="leftBarButtonItem" enabled="NO" title="Favorite" id="sEK-0F-udJ">
                             <connections>
-                                <action selector="share" destination="PrJ-RN-OXa" id="gIU-Og-1fg"/>
+                                <action selector="toggleFavorite" destination="PrJ-RN-OXa" id="ZBm-77-pKj"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Favorite" id="sEK-0F-udJ">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="action" id="IGU-Vx-hOa">
                             <connections>
-                                <action selector="toggleFavorite:" destination="PrJ-RN-OXa" id="XzX-va-ExR"/>
+                                <action selector="share" destination="PrJ-RN-OXa" id="gIU-Og-1fg"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

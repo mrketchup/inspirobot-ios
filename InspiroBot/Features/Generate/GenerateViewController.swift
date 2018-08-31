@@ -44,7 +44,7 @@ class GenerateViewController: UIViewController {
         
     }
     
-    @IBAction private func toggleFavorite(_ sender: UIBarButtonItem) {
+    @IBAction private func toggleFavorite() {
         guard let poster = poster else { return }
         
         if InspiroBotService.shared.toggleFavorite(poster) {
